@@ -46,7 +46,7 @@ const Navbar = () => (
           </a>
         ))}
       </div>
-      <a href="/resume.png" download="JaiRagulD_Resume.png">
+      <a href="/resume.pdf" download="JaiRagulD_Resume.pdf">
         <Button size="sm" className="bg-primary/10 border border-primary/40 text-primary hover:bg-primary/20 gap-2 font-mono-tech text-xs tracking-wider">
           <Download className="w-4 h-4" />
           DOWNLOAD RESUME
