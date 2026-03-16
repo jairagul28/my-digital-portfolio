@@ -3,7 +3,7 @@ import { Download, Github, Linkedin, Mail, Phone, Globe, ChevronRight, ExternalL
 import { Button } from "@/components/ui/button";
 import { useRef } from "react";
 
-/* ─── Floating HUD particles ─── */
+
 const HudParticles = () => (
   <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
     {[...Array(20)].map((_, i) => (
@@ -21,7 +21,7 @@ const HudParticles = () => (
   </div>
 );
 
-/* ─── Navbar ─── */
+
 const Navbar = () => (
   <motion.nav
     initial={{ y: -60, opacity: 0 }}
@@ -32,7 +32,7 @@ const Navbar = () => (
       <div className="flex items-center gap-3">
         <div className="w-8 h-8 rounded-full arc-reactor-glow animate-pulse" />
         <span className="font-heading text-lg font-bold tracking-[0.3em] text-gradient-jarvis" style={{ fontFamily: 'Orbitron' }}>
-          J.A.R.V.I.S
+          JRD
         </span>
       </div>
       <div className="hidden md:flex items-center gap-8">
@@ -46,7 +46,7 @@ const Navbar = () => (
           </a>
         ))}
       </div>
-      <a href="/resume.pdf" download="JaiRagulD_Resume.pdf">
+      <a href="/resume.pdf?v=1" download="JaiRagulD_Resume.pdf">
         <Button size="sm" className="bg-primary/10 border border-primary/40 text-primary hover:bg-primary/20 gap-2 font-mono-tech text-xs tracking-wider">
           <Download className="w-4 h-4" />
           DOWNLOAD RESUME
@@ -56,7 +56,7 @@ const Navbar = () => (
   </motion.nav>
 );
 
-/* ─── Hero ─── */
+
 const Hero = () => {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end start"] });
@@ -64,9 +64,7 @@ const Hero = () => {
 
   return (
     <section ref={ref} className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20 scanlines">
-      {/* HUD grid background */}
       <div className="absolute inset-0 hud-grid opacity-30" />
-      {/* Arc reactor glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] arc-reactor-glow opacity-10" />
 
       <motion.div style={{ opacity }} className="max-w-6xl mx-auto px-6 text-center relative z-10">
@@ -119,10 +117,9 @@ const Hero = () => {
 
           <div className="flex items-center justify-center gap-6 mt-10">
             {[
-              { icon: Github, href: "#", label: "GitHub" },
-              { icon: Linkedin, href: "https://www.linkedin.com/in/jai-ragul", label: "LinkedIn" },
+              { icon: Github, href: "https://github.com/jairagul28", label: "GitHub" },
+              { icon: Linkedin, href: "https://www.linkedin.com/in/-jai-ragul-/", label: "LinkedIn" },
               { icon: Mail, href: "mailto:jairaguldhanapal@gmail.com", label: "Email" },
-              { icon: Phone, href: "tel:+919043624840", label: "Phone" },
             ].map(({ icon: Icon, href, label }) => (
               <motion.a
                 key={label}
@@ -149,7 +146,7 @@ const Hero = () => {
   );
 };
 
-/* ─── Shared animation ─── */
+
 const fadeUp = {
   initial: { opacity: 0, y: 40 },
   whileInView: { opacity: 1, y: 0 },
@@ -164,7 +161,7 @@ const SectionLabel = ({ text }: { text: string }) => (
   </div>
 );
 
-/* ─── About ─── */
+
 const About = () => (
   <section id="about" className="py-24 relative">
     <div className="max-w-6xl mx-auto px-6">
@@ -211,7 +208,7 @@ const About = () => (
   </section>
 );
 
-/* ─── Skills ─── */
+
 const skills = {
   "Frontend": ["HTML", "CSS", "JavaScript", "React.js"],
   "Backend": ["Node.js", "Express.js", "MongoDB"],
@@ -265,7 +262,7 @@ const Skills = () => (
   </section>
 );
 
-/* ─── Experience ─── */
+
 const Experience = () => (
   <section id="experience" className="py-24">
     <div className="max-w-6xl mx-auto px-6">
@@ -313,27 +310,31 @@ const Experience = () => (
   </section>
 );
 
-/* ─── Projects ─── */
+
 const projects = [
   {
     title: "Cafe Website",
     desc: "A responsive café website designed to showcase menu items, offers, and seamless customer interaction.",
     tags: ["HTML", "CSS", "JavaScript"],
+    link: "https://github.com/jairagul28/coffee-shop-table-reservation"
   },
   {
     title: "Turf Booking",
     desc: "A web-based turf booking platform enabling users to search, reserve, and manage sports grounds efficiently.",
-    tags: ["React.js", "Node.js", "MongoDB"],
+    tags: ["React.js", "Node.js"],
+    link: "https://github.com/jairagul28/turf-booking"
   },
   {
     title: "Movie Ticket Booking",
     desc: "A responsive platform for booking movie tickets with real-time show and seat availability.",
     tags: ["React.js", "CSS", "JavaScript"],
+    link: "https://github.com/jairagul28/movie-ticket-booking"
   },
   {
     title: "Library Book Management",
     desc: "Full-stack CRUD system using Node.js & Express.js for managing library books.",
-    tags: ["Node.js", "Express.js", "MongoDB"],
+    tags: ["Node.js", "Express.js"],
+    link: "https://github.com/jairagul28/Library-Book-Management"
   },
 ];
 
@@ -350,14 +351,17 @@ const Projects = () => (
 
         <div className="grid md:grid-cols-2 gap-6">
           {projects.map((project, i) => (
-            <motion.div
+            <motion.a
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
               key={project.title}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1, duration: 0.5 }}
               whileHover={{ scale: 1.02 }}
-              className="group p-6 rounded-lg bg-card hud-border hover-hud hud-corners relative overflow-hidden"
+              className="group p-6 rounded-lg bg-card hud-border hover-hud hud-corners relative overflow-hidden block"
             >
               <div className="flex items-start justify-between mb-3">
                 <h3 className="font-semibold group-hover:text-primary transition-colors tracking-wider" style={{ fontFamily: 'Orbitron', fontSize: '0.9rem' }}>
@@ -376,7 +380,7 @@ const Projects = () => (
                   </span>
                 ))}
               </div>
-            </motion.div>
+            </motion.a>
           ))}
         </div>
       </motion.div>
@@ -384,7 +388,7 @@ const Projects = () => (
   </section>
 );
 
-/* ─── Education ─── */
+
 const Education = () => (
   <section className="py-24">
     <div className="max-w-6xl mx-auto px-6">
@@ -418,7 +422,7 @@ const Education = () => (
   </section>
 );
 
-/* ─── Contact ─── */
+
 const Contact = () => (
   <section id="contact" className="py-24 relative">
     <div className="absolute inset-0 hud-grid opacity-10" />
@@ -440,11 +444,6 @@ const Contact = () => (
               <Mail className="w-5 h-5" /> jairaguldhanapal@gmail.com
             </Button>
           </a>
-          <a href="tel:+919043624840">
-            <Button size="lg" variant="outline" className="border-primary/40 text-primary hover:bg-primary/10 gap-2 font-mono-tech text-xs tracking-wider">
-              <Phone className="w-5 h-5" /> +91-9043624840
-            </Button>
-          </a>
         </div>
 
         <div className="flex justify-center gap-3 mt-6">
@@ -459,19 +458,19 @@ const Contact = () => (
   </section>
 );
 
-/* ─── Footer ─── */
+
 const Footer = () => (
   <footer className="py-8 border-t border-border/30">
     <div className="max-w-6xl mx-auto px-6 flex flex-col items-center gap-2">
       <div className="h-px w-20 bg-gradient-to-r from-transparent via-primary/30 to-transparent mb-2" />
       <p className="font-mono-tech text-[10px] tracking-[0.4em] text-muted-foreground uppercase">
-        © 2026 Jai Ragul D • Powered by J.A.R.V.I.S
+        © 2026 Jai Ragul D • Powered by JRD
       </p>
     </div>
   </footer>
 );
 
-/* ─── Main ─── */
+
 const Index = () => (
   <div className="min-h-screen bg-background relative">
     <HudParticles />
