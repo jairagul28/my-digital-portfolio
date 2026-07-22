@@ -288,6 +288,7 @@ const Experience = () => (
                 Worked on responsive UI development using HTML, CSS, JS; contributed to React.js
                 dashboard features, optimized performance, and collaborated using Git/GitHub.
               </p>
+               <span className="font-mono-tech text-[10px] tracking-[0.4em] text-primary uppercase">Jul 2026</span>
               <h3 className="text-xl font-semibold mt-2" style={{ fontFamily: 'Orbitron', fontSize: '1rem' }}></h3>
                 Machine Learning Intern
                  <p className="font-mono-tech text-xs text-muted-foreground mt-1 tracking-wider">GRADTWIN TECHNOLOGIES ,CHENNAI</p>
