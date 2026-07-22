@@ -46,7 +46,7 @@ const Navbar = () => (
           </a>
         ))}
       </div>
-      <a href="/resume.pdf?v=1" download="JaiRagulD_Resume.pdf">
+      <a href="/resume.pdf?v=2" download="JaiRagulD_Resume.pdf">
         <Button size="sm" className="bg-primary/10 border border-primary/40 text-primary hover:bg-primary/20 gap-2 font-mono-tech text-xs tracking-wider">
           <Download className="w-4 h-4" />
           DOWNLOAD RESUME
@@ -81,7 +81,7 @@ const Hero = () => {
           />
 
           <p className="font-mono-tech text-primary text-xs mb-6 tracking-[0.5em] uppercase">
-            &gt; System Online • Web Developer • Software Tester
+            &gt; System Online • Web Developer • AI/ML Engineer
           </p>
 
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-2 tracking-[0.15em]" style={{ fontFamily: 'Orbitron' }}>
@@ -98,8 +98,8 @@ const Hero = () => {
           </motion.div>
 
           <p className="text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
-            Building responsive web applications and ensuring quality through meticulous testing.
-            Passionate about delivering reliable and user-friendly software.
+           Building responsive web applications and intelligent AI solutions.
+          Passionate about creating scalable, reliable, and user-centric software.
           </p>
 
           <div className="flex items-center justify-center gap-4 flex-wrap">
@@ -118,7 +118,7 @@ const Hero = () => {
           <div className="flex items-center justify-center gap-6 mt-10">
             {[
               { icon: Github, href: "https://github.com/jairagul28", label: "GitHub" },
-              { icon: Linkedin, href: "https://www.linkedin.com/in/-jai-ragul-/", label: "LinkedIn" },
+              { icon: Linkedin, href: "https://www.linkedin.com/in/jai-ragul/", label: "LinkedIn" },
               { icon: Mail, href: "mailto:jairaguldhanapal@gmail.com", label: "Email" },
             ].map(({ icon: Icon, href, label }) => (
               <motion.a
@@ -175,19 +175,18 @@ const About = () => (
         <div className="grid md:grid-cols-2 gap-12">
           <div className="space-y-4 text-muted-foreground leading-relaxed text-lg">
             <p>
-              I'm a Web Developer and Software Tester with strong knowledge of building
-              responsive web applications and ensuring quality through manual testing.
+              I'm a Full Stack Web Developer and AI/ML Engineer passionate about building responsive web applications and intelligent solutions that solve real-world problems. 
+              I enjoy developing scalable, user-friendly software by combining modern web technologies with machine learning techniques.
             </p>
             <p>
-              Skilled in HTML, CSS, JavaScript, backend development, test case design, and bug
-              reporting. Currently pursuing B.E. in Computer Science and Engineering at NSCET, Theni
-              with a CGPA of 8.1.
+              Skilled in HTML, CSS, JavaScript, React.js, Node.js, Express.js, MongoDB, Python, and Machine Learning, with hands-on experience in software quality practices including manual testing, test case design, API testing, and bug reporting.
+              Currently pursuing a B.E. in Computer Science and Engineering at NSCET, Theni, with a CGPA of 8.1, and continuously expanding my expertise in full-stack development, artificial intelligence, and software engineering.
             </p>
           </div>
           <div className="grid grid-cols-2 gap-4">
             {[
               { label: "CGPA", value: "8.1", icon: Zap },
-              { label: "Semester", value: "4th", icon: Cpu },
+              { label: "Semester", value: "5th", icon: Cpu },
               { label: "Languages", value: "3", icon: Globe },
               { label: "Projects", value: "4+", icon: Code2 },
             ].map(({ label, value, icon: Icon }) => (
@@ -210,9 +209,12 @@ const About = () => (
 
 
 const skills = {
-  "Frontend": ["HTML", "CSS", "JavaScript", "React.js"],
-  "Backend": ["Node.js", "Express.js", "MongoDB"],
-  "Languages": ["Python", "C"],
+  "Frontend": ["HTML", "CSS", "JavaScript", "React.js", "Bootstarp"],
+  "Backend": ["Node.js", "Express.js", "Python",],
+  "AI / Machine Learning": [
+  "Python", "Scikit-learn","Pandas","NumPy","Machine Learning",
+  "Data Preprocessing","Model Training","Classification","Ensemble Learning"],
+  "Languages": ["Python", "C",],
   "Tools": ["Git", "GitHub", "VS Code", "Postman"],
   "Testing": ["Manual Testing", "BDD", "Test Cases", "Bug Reporting"],
   "Soft Skills": ["Communication", "Time Management", "Adaptability"],
@@ -286,6 +288,13 @@ const Experience = () => (
                 Worked on responsive UI development using HTML, CSS, JS; contributed to React.js
                 dashboard features, optimized performance, and collaborated using Git/GitHub.
               </p>
+              <h3 className="text-xl font-semibold mt-2" style={{ fontFamily: 'Orbitron', fontSize: '1rem' }}></h3>
+                Machine Learning Intern
+                 <p className="font-mono-tech text-xs text-muted-foreground mt-1 tracking-wider">GRADTWIN TECHNOLOGIES ,CHENNAI</p>
+                  <p className="text-muted-foreground mt-3 text-sm leading-relaxed">
+                    Built a full-stack Intrusion Detection System using React, Node.js, Flask, and MongoDB with ensemble machine learning. 
+                    Implemented real-time network monitoring,live traffic analysis, and attack detection using Scapy and CICIDS2017.
+              </p>
             </div>
           </div>
 
@@ -313,22 +322,22 @@ const Experience = () => (
 
 const projects = [
   {
-    title: "Cafe Website",
-    desc: "A responsive café website designed to showcase menu items, offers, and seamless customer interaction.",
-    tags: ["HTML", "CSS", "JavaScript"],
-    link: "https://github.com/jairagul28/coffee-shop-table-reservation"
+    title: "Women Self Help Group [SHG]",
+    desc: "Full-featured MERN platform for efficient SHG management and collaboration among group members.",
+    tags: ["MERN stack"],
+    link: "https://github.com/jairagul28/SHG--AMORA-.git"
   },
   {
     title: "Turf Booking",
     desc: "A web-based turf booking platform enabling users to search, reserve, and manage sports grounds efficiently.",
-    tags: ["React.js", "Node.js"],
-    link: "https://github.com/jairagul28/turf-booking"
+    tags: ["React.js", "Node.js","Express.js"],
+    link: "https://github.com/jairagul28/full-stack-turf-booking.git"
   },
   {
-    title: "Movie Ticket Booking",
-    desc: "A responsive platform for booking movie tickets with real-time show and seat availability.",
-    tags: ["React.js", "CSS", "JavaScript"],
-    link: "https://github.com/jairagul28/movie-ticket-booking"
+    title: "Network Intrusion Detection System",
+    desc: "Built a full-stack Intrusion Detection System with real-time network traffic monitoring using Scapy and ensemble machine learning.",
+    tags: ["MERN Stack.Python .Flask.ML"],
+    link: "https://github.com/jairagul28/IDS-Ensemble-ML.git"
   },
   {
     title: "Library Book Management",
@@ -406,7 +415,7 @@ const Education = () => (
               B.E. Computer Science and Engineering
             </h3>
             <p className="text-sm text-muted-foreground mt-1">NSCET, Theni</p>
-            <p className="font-mono-tech text-xs text-primary mt-2 tracking-wider">CGPA: 8.1 up to 4th semester</p>
+            <p className="font-mono-tech text-xs text-primary mt-2 tracking-wider">CGPA: 8.1 up to 5th semester</p>
           </motion.div>
 
           <motion.div whileHover={{ scale: 1.01 }} className="p-6 rounded-lg bg-card hud-border hover-hud hud-corners relative overflow-hidden">
