@@ -279,18 +279,18 @@ const Experience = () => (
           <div className="relative">
             <div className="absolute -left-[1.15rem] top-1 w-3 h-3 rounded-full bg-primary hud-glow-strong" />
             <div className="p-6 rounded-lg bg-card hud-border hover-hud hud-corners relative overflow-hidden">
-              <span className="font-mono-tech text-[10px] tracking-[0.4em] text-primary uppercase">Jul 2025</span>
+              <span className="font-mono-tech text-[10px] tracking-[0.4em] text-primary uppercase">Jul 2025 - Aug 2025</span>
               <h3 className="text-xl font-semibold mt-2" style={{ fontFamily: 'Orbitron', fontSize: '1rem' }}>
-                Web Development Intern
+                Web Development Intern [15 Days]
               </h3>
               <p className="font-mono-tech text-xs text-muted-foreground mt-1 tracking-wider">LITZ TECH, Coimbatore</p>
               <p className="text-muted-foreground mt-3 text-sm leading-relaxed">
                 Worked on responsive UI development using HTML, CSS, JS; contributed to React.js
                 dashboard features, optimized performance, and collaborated using Git/GitHub.
               </p>
-               <span className="font-mono-tech text-[10px] tracking-[0.4em] text-primary uppercase">Jul 2026</span>
+               <span className="font-mono-tech text-[10px] tracking-[0.4em] text-primary uppercase">Jun 2026 - July 2026</span>
               <h3 className="text-xl font-semibold mt-2" style={{ fontFamily: 'Orbitron', fontSize: '1rem' }}></h3>
-                Machine Learning Intern
+                Machine Learning Intern [1 Month]
                  <p className="font-mono-tech text-xs text-muted-foreground mt-1 tracking-wider">GRADTWIN TECHNOLOGIES ,CHENNAI</p>
                   <p className="text-muted-foreground mt-3 text-sm leading-relaxed">
                     Built a full-stack Intrusion Detection System using React, Node.js, Flask, and MongoDB with ensemble machine learning. 
